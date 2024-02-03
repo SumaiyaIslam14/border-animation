@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+.box{
+    position: relative;
+    width: 190vh;
+    height: 95vh;
+    background:rgb(0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box::before{
+    content: '';
+    background-image: conic-gradient(rgb(255, 60, 60) 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 3s linear infinite;
+}
+.box::after{
+    content: '';
+    width: 188vh;
+    height: 93vh;
+    background-color: black;
+    position: absolute;
+    border-radius: 10px;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
